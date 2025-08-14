@@ -12,10 +12,6 @@ from AviaxMusic.plugins import ALL_MODULES
 from AviaxMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
-from pathlib import Path
-for file in Path("AviaxMusic/plugins").rglob("*.py"):
-    importlib.import_module(f"AviaxMusic.plugins.{file.stem}")
-
 from AviaxMusic.plugins.tictactoe import register_tictactoe
 register_tictactoe(app)  # Or dispatcher, depending on your setup
 
@@ -66,4 +62,5 @@ async def init():
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
 
