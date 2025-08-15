@@ -1,25 +1,25 @@
 HELP_1 = """<b>📣 PLAY & CONTROL COMMANDS </b>
 
-/play - play audio in vc
-/vplay - play video in vc
-/playforce - force play audio
-/vplayforce - force play video
-/cplay - play audio in channel
-/cvplay - play video in channel
-/cplayforce - force play audio in channel
-/cvplayforce - force play video in channel
-/pause - pause current stream
-/resume - resume paused stream
-/skip - skip current track
-/end - stop playback & clear queue
-/player - interactive player panel
-/queue - show current queue
-/shuffle - shuffle the queue
-/loop enable/disable - loop current stream
-/seek [sec] - seek forward in stream
-/seekback [sec] - seek backward in stream
-/speed - adjust playback speed (group)
-/cspeed - adjust playback speed (channel)
+✦ /play - ᴘʟᴀʏ ᴀᴜᴅɪᴏ ɪɴ ᴠᴄ  
+✦ /vplay - ᴘʟᴀʏ ᴠɪᴅᴇᴏ ɪɴ ᴠᴄ  
+✦ /playforce - ꜰᴏʀᴄᴇ ᴘʟᴀʏ ᴀᴜᴅɪᴏ  
+✦ /vplayforce - ꜰᴏʀᴄᴇ ᴘʟᴀʏ ᴠɪᴅᴇᴏ  
+✦ /cplay - ᴘʟᴀʏ ᴀᴜᴅɪᴏ ɪɴ ᴄʜᴀɴɴᴇʟ  
+✦ /cvplay - ᴘʟᴀʏ ᴠɪᴅᴇᴏ ɪɴ ᴄʜᴀɴɴᴇʟ  
+✦ /cplayforce - ꜰᴏʀᴄᴇ ᴘʟᴀʏ ᴀᴜᴅɪᴏ ɪɴ ᴄʜᴀɴɴᴇʟ  
+✦ /cvplayforce - ꜰᴏʀᴄᴇ ᴘʟᴀʏ ᴠɪᴅᴇᴏ ɪɴ ᴄʜᴀɴɴᴇʟ  
+✦ /pause - ᴘᴀᴜꜱᴇ ᴄᴜʀʀᴇɴᴛ ꜱᴛʀᴇᴀᴍ  
+✦ /resume - ʀᴇꜱᴜᴍᴇ ᴘᴀᴜꜱᴇᴅ ꜱᴛʀᴇᴀᴍ  
+✦ /skip - ꜱᴋɪᴘ ᴄᴜʀʀᴇɴᴛ ᴛʀᴀᴄᴋ  
+✦ /end - ꜱᴛᴏᴘ ᴘʟᴀʏʙᴀᴄᴋ & ᴄʟᴇᴀʀ Qᴜᴇᴜᴇ  
+✦ /player - ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴘʟᴀʏᴇʀ ᴘᴀɴᴇʟ  
+✦ /queue - ꜱʜᴏᴡ ᴄᴜʀʀᴇɴᴛ Qᴜᴇᴜᴇ  
+✦ /shuffle - ꜱʜᴜꜰꜰʟᴇ ᴛʜᴇ Qᴜᴇᴜᴇ  
+✦ /loop ᴇɴᴀʙʟᴇ/ᴅɪꜱᴀʙʟᴇ - ʟᴏᴏᴘ ᴄᴜʀʀᴇɴᴛ ꜱᴛʀᴇᴀᴍ  
+✦ /seek [ꜱᴇᴄ] - ꜱᴇᴇᴋ ꜰᴏʀᴡᴀʀᴅ ɪɴ ꜱᴛʀᴇᴀᴍ  
+✦ /seekback [ꜱᴇᴄ] - ꜱᴇᴇᴋ ʙᴀᴄᴋᴡᴀʀᴅ ɪɴ ꜱᴛʀᴇᴀᴍ  
+✦ /speed - ᴀᴅᴊᴜꜱᴛ ᴘʟᴀʏʙᴀᴄᴋ ꜱᴘᴇᴇᴅ (ɢʀᴏᴜᴘ)  
+✦ /cspeed - ᴀᴅᴊᴜꜱᴛ ᴘʟᴀʏʙᴀᴄᴋ ꜱᴘᴇᴇᴅ (ᴄʜᴀɴɴᴇʟ)
 
 📣 @DreamSongRobot 
 """
@@ -27,20 +27,20 @@ HELP_1 = """<b>📣 PLAY & CONTROL COMMANDS </b>
 HELP_2 = """
 <b>⚙️ ADMIN & AUTH MANAGEMENT</b>
 
-/auth [user] - add user to auth list
-/unauth [user] - remove user from auth list
-/authusers - list auth users
-/block [user] - block user from bot
-/unblock [user] - unblock user
-/blockedusers - list blocked users
-/gban [user] - global ban user
-/ungban [user] - global unban user
-/gbannedusers - list global banned users
-/blacklistchat [id] - block chat from bot
-/whitelistchat [id] - unblock chat
-/blacklistedchat - list blacklisted chats
-/channelplay [username/id] - link channel to group
-/channelplay disable - unlink channel
+✦ /auth [ᴜꜱᴇʀ] - ᴀᴅᴅ ᴜꜱᴇʀ ᴛᴏ ᴀᴜᴛʜ ʟɪꜱᴛ  
+✦ /unauth [ᴜꜱᴇʀ] - ʀᴇᴍᴏᴠᴇ ᴜꜱᴇʀ ꜰʀᴏᴍ ᴀᴜᴛʜ ʟɪꜱᴛ  
+✦ /authers - ʟɪꜱᴛ ᴀᴜᴛʜ ᴜꜱᴇʀꜱ  
+✦ /block [ᴜꜱᴇʀ] - ʙʟᴏᴄᴋ ᴜꜱᴇʀ ꜰʀᴏᴍ ʙᴏᴛ  
+✦ /unblock [ᴜꜱᴇʀ] - ᴜɴʙʟᴏᴄᴋ ᴜꜱᴇʀ  
+✦ /blockedusers - ʟɪꜱᴛ ʙʟᴏᴄᴋᴇᴅ ᴜꜱᴇʀꜱ  
+✦ /gban [ᴜꜱᴇʀ] - ɢʟᴏʙᴀʟ ʙᴀɴ ᴜꜱᴇʀ 
+✦ /ungban [ᴜꜱᴇʀ] - ɢʟᴏʙᴀʟ ᴜɴʙᴀɴ ᴜꜱᴇʀ  
+✦ /gbannedusers - ʟɪꜱᴛ ɢʟᴏʙᴀʟ ʙᴀɴɴᴇᴅ ᴜꜱᴇʀꜱ  
+✦ /blacklistchat [ɪᴅ] - ʙʟᴏᴄᴋ ᴄʜᴀᴛ ꜰʀᴏᴍ ʙᴏᴛ  
+✦ /whitelistchat [ɪᴅ] - ᴜɴʙʟᴏᴄᴋ ᴄʜᴀᴛ  
+✦ /blacklistedchat - ʟɪꜱᴛ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴄʜᴀᴛꜱ  
+✦ /channelplay [ᴜꜱᴇʀɴᴀᴍᴇ/ɪᴅ] - ʟɪɴᴋ ᴄʜᴀɴɴᴇʟ ᴛᴏ ɢʀᴏᴜᴘ  
+✦ /channelplay ᴅɪꜱᴀʙʟᴇ - ᴜɴʟɪɴᴋ ᴄʜᴀɴɴᴇʟ
 
 📣 @DreamSongRobot
 """
@@ -48,17 +48,17 @@ HELP_2 = """
 HELP_3 = """
 <b>🔔 BROADCAST & MAINTENANCE</b>
 
-/broadcast [msg] - broadcast message
-/broadcast -pin - pin broadcast
-/broadcast -pinloud - pin & notify members
-/broadcast -user - send to bot users
-/broadcast -assistant - send from assistant
-/logs - get bot logs
-/logger enable/disable - toggle logging
-/maintenance enable/disable - toggle maintenance mode
-/ping - show bot ping & system stats
-/stats - show bot statistics
-/song [name/url] - download song (mp3/mp4)
+✦ /broadcast [ᴍꜱɢ] - ʙʀᴏᴀᴅᴄᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ  
+✦ /broadcast -ᴘɪɴ - ᴘɪɴ ʙʀᴏᴀᴅᴄᴀꜱᴛ  
+✦ /broadcast -ᴘɪɴʟᴏᴜᴅ - ᴘɪɴ & ɴᴏᴛɪꜰʏ ᴍᴇᴍʙᴇʀꜱ  
+✦ /broadcast -ᴜꜱᴇʀ - ꜱᴇɴᴅ ᴛᴏ ʙᴏᴛ ᴜꜱᴇʀꜱ  
+✦ /broadcast -ᴀꜱꜱɪꜱᴛᴀɴᴛ - ꜱᴇɴᴅ ꜰʀᴏᴍ ᴀꜱꜱɪꜱᴛᴀɴᴛ  
+✦ /logs - ɢᴇᴛ ʙᴏᴛ ʟᴏɢꜱ  
+✦ /logger ᴇɴᴀʙʟᴇ/ᴅɪꜱᴀʙʟᴇ - ᴛᴏɢɢʟᴇ ʟᴏɢɢɪɴɢ  
+✦ /maintenance ᴇɴᴀʙʟᴇ/ᴅɪꜱᴀʙʟᴇ - ᴛᴏɢɢʟᴇ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ  
+✦ /ping - ꜱʜᴏᴡ ʙᴏᴛ ᴘɪɴɢ & ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ  
+✦ /stats - ꜱʜᴏᴡ ʙᴏᴛ ꜱᴛᴀᴛɪꜱᴛɪᴄꜱ  
+✦ /song [ɴᴀᴍᴇ/ᴜʀʟ] - ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴏɴɢ (ᴍᴘ3/ᴍᴘ4)
 
 📣 @DreamSongRobot
 """
@@ -83,6 +83,18 @@ HELP_4 = """<b>Bot List & More</b>
 
 ╭⎋ Bot Name: @DreamsFourRobot
 ╰⊚ Bot Status: ᴀʟɪᴠᴇ ✨
+
+📣 @DreamSongRobot
+"""
+
+HELP_5 = """<b>Privacy Policy</b>
+
+✦ Data collected – ᴡᴇ ꜱᴛᴏʀᴇ ᴏɴʟʏ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ᴜꜱᴇʀ ɪᴅ, ᴄʜᴀᴛ ɪᴅꜱ, ᴀɴᴅ ʙᴏᴛ-ʀᴇʟᴀᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ɴᴇᴇᴅᴇᴅ ꜰᴏʀ ᴍᴜꜱɪᴄ ᴘʟᴀʏʙᴀᴄᴋ. 
+✦ Usage – ᴅᴀᴛᴀ ɪꜱ ᴜꜱᴇᴅ ᴏɴʟʏ ᴛᴏ ᴏᴘᴇʀᴀᴛᴇ ᴀɴᴅ ɪᴍᴘʀᴏᴠᴇ ᴛʜᴇ ʙᴏᴛ’ꜱ ꜰᴇᴀᴛᴜʀᴇꜱ. 
+✦ Storage – ᴅᴀᴛᴀ ɪꜱ ꜱᴛᴏʀᴇᴅ ꜱᴇᴄᴜʀᴇʟʏ ᴀɴᴅ ᴅᴇʟᴇᴛᴇᴅ ᴡʜᴇɴ ɴᴏ ʟᴏɴɢᴇʀ ɴᴇᴇᴅᴇᴅ. 
+✦ Sharing – ᴡᴇ ᴅᴏ ɴᴏᴛ ꜱʜᴀʀᴇ ʏᴏᴜʀ ᴅᴀᴛᴀ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ, ᴇxᴄᴇᴘᴛ ᴡʜᴇɴ ʀᴇQᴜɪʀᴇᴅ ʙʏ ʟᴀᴡ. 
+✦ YourRight – ʏᴏᴜ ᴄᴀɴ ʀᴇQᴜᴇꜱᴛ ᴅᴇʟᴇᴛɪᴏɴ ᴏꜰ ʏᴏᴜʀ ᴅᴀᴛᴀ ᴀɴʏᴛɪᴍᴇ ᴠɪᴀ @ʏᴏᴜʀᴜꜱᴇʀɴᴀᴍᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. 
+✦ Security – ᴡᴇ ᴛᴀᴋᴇ ꜱᴛᴇᴘꜱ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ᴅᴀᴛᴀ ʙᴜᴛ ᴄᴀɴɴᴏᴛ ɢᴜᴀʀᴀɴᴛᴇᴇ ᴄᴏᴍᴘʟᴇᴛᴇ ꜱᴇᴄᴜʀɪᴛʏ.
 
 📣 @DreamSongRobot
 """
