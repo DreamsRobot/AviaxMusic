@@ -72,19 +72,20 @@ HELP_4 = """<b>Bot List & More</b>
 ╭⎋ Bot Name: @DreamSongRobot
 ╰⊚ Bot Status: ᴀʟɪᴠᴇ ✨
 
-╭⎋ Bot Name: @DreamsOneRobot
+╭⎋ Bot Name: @DreamOneRobot
 ╰⊚ Bot Status: ᴀʟɪᴠᴇ ✨
 
-╭⎋ Bot Name: @DreamsTwoRobot
+╭⎋ Bot Name: @DreamTwoRobot
 ╰⊚ Bot Status: ᴀʟɪᴠᴇ ✨
 
-╭⎋ Bot Name: @DreamsThreeRobot
+╭⎋ Bot Name: @DreamThreeRobot
 ╰⊚ Bot Status: ᴀʟɪᴠᴇ ✨
 
-╭⎋ Bot Name: @DreamsFourRobot
+╭⎋ Bot Name: @DreamFourRobot
 ╰⊚ Bot Status: ᴀʟɪᴠᴇ ✨
 
 📣 @DreamSongRobot
 """
+
 
 
