@@ -55,7 +55,14 @@ async def help_com_group(client, message: Message, _):
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
-    cb = CallbackQuery.data.strip().split(None, 1)[1]
+    callback_data = CallbackQuery.data.strip()
+    cb = callback_data.split(None, 1)[1]
     keyboard = help_back_markup(_)
-    text = helpers.HELP_16.format(app.name) if cb == "hb16" else getattr(helpers, f"HELP_{cb[2:]}")
-    await CallbackQuery.edit_message_text(text, reply_markup=keyboard)
+    if cb == "hb1":
+        await CallbackQuery.edit_message_text(helpers.HELP_1, reply_markup=keyboard)
+    elif cb == "hb2":
+        await CallbackQuery.edit_message_text(helpers.HELP_2, reply_markup=keyboard)
+    elif cb == "hb3":
+        await CallbackQuery.edit_message_text(helpers.HELP_3, reply_markup=keyboard)
+    elif cb == "hb4":
+        await CallbackQuery.edit_message_text(helpers.HELP_4, reply_markup=keyboard)
