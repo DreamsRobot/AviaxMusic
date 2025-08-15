@@ -36,13 +36,6 @@ def help_pannel(_, START: Union[bool, int] = None):
                     callback_data="help_callback hb4",
                 ),
             ],
-              [
-                InlineKeyboardButton(
-                    text=_["BACK_BUTTON"],
-                    callback_data=f"settings_back_helper",
-                ),
-            ],
-
             mark,
         ]
     )
@@ -73,4 +66,5 @@ def private_help_panel(_):
         ],
     ]
     return buttons
+
 
