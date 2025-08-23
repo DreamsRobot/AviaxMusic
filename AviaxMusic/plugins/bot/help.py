@@ -1,61 +1,51 @@
 from typing import Union
-
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 from AviaxMusic import app
-from AviaxMusic.utils import help_pannel
 from AviaxMusic.utils.database import get_lang
 from AviaxMusic.utils.decorators.language import LanguageStart, languageCB
-from AviaxMusic.utils.inline.help import help_back_markup, private_help_panel
+from AviaxMusic.utils.inline.help import help_main_menu, help_music_menu, help_advanced_menu
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
 from strings import get_string, helpers
 
 
+# Start Help (Private)
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
-@app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
-async def helper_private(
-    client: app, update: Union[types.Message, types.CallbackQuery]
-):
-    is_callback = isinstance(update, types.CallbackQuery)
-    if is_callback:
-        try:
-            await update.answer()
-        except:
-            pass
-        chat_id = update.message.chat.id
-        language = await get_lang(chat_id)
-        _ = get_string(language)
-        keyboard = help_pannel(_, True)
-        await update.edit_message_text(
-            _["help_1"].format(SUPPORT_GROUP), reply_markup=keyboard
-        )
+async def helper_private(client, message: types.Message):
+    language = await get_lang(message.chat.id)
+    _ = get_string(language)
+    await message.reply_photo(
+        photo=START_IMG_URL,
+        caption=_["help_1"].format(SUPPORT_GROUP),
+        reply_markup=help_main_menu(_),
+    )
+
+
+# Switch between Menus
+@app.on_callback_query(filters.regex("help_section") & ~BANNED_USERS)
+@languageCB
+async def help_sections(client, CallbackQuery, _):
+    section = CallbackQuery.data.split()[1]
+    if section == "music":
+        await CallbackQuery.edit_message_reply_markup(reply_markup=help_music_menu(_))
+    elif section == "advanced":
+        await CallbackQuery.edit_message_reply_markup(reply_markup=help_advanced_menu(_))
     else:
-        try:
-            await update.delete()
-        except:
-            pass
-        language = await get_lang(update.chat.id)
-        _ = get_string(language)
-        keyboard = help_pannel(_)
-        await update.reply_photo(
-            photo=START_IMG_URL,
-            caption=_["help_1"].format(SUPPORT_GROUP),
-            reply_markup=keyboard,
-        )
+        await CallbackQuery.answer("⚙️ Settings not added yet", show_alert=True)
 
 
-@app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
-@LanguageStart
-async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
-    await message.reply_text(_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
+# Back to Main Menu
+@app.on_callback_query(filters.regex("help_main") & ~BANNED_USERS)
+@languageCB
+async def back_to_main(client, CallbackQuery, _):
+    await CallbackQuery.edit_message_reply_markup(reply_markup=help_main_menu(_))
 
 
+# Handle Help Callback (hb1..hb21)
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
     cb = CallbackQuery.data.strip().split(None, 1)[1]
-    keyboard = help_back_markup(_)
-    text = helpers.HELP_16.format(app.name) if cb == "hb16" else getattr(helpers, f"HELP_{cb[2:]}")
-    await CallbackQuery.edit_message_text(text, reply_markup=keyboard)
+    text = getattr(helpers, f"HELP_{cb[2:]}", "ℹ️ No help available for this.")
+    await CallbackQuery.edit_message_text(text, reply_markup=help_main_menu(_))
