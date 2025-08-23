@@ -9,7 +9,6 @@ from AviaxMusic.utils.inline.help import (
     help_main_menu,
     help_music_menu,
     help_advanced_menu,
-    support_menu,
     help_back_markup,
 )
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
@@ -54,11 +53,11 @@ async def back_to_main(client, CallbackQuery, _):
 async def helper_cb(client, CallbackQuery, _):
     cb = CallbackQuery.data.strip().split(None, 1)[1]
 
-    # Support Section (bs2)
+    # Support Section (bs2) removed
     if cb == "bs2":
         await CallbackQuery.message.edit_text(
-            "Choose from the Support Menu below 👇",
-            reply_markup=support_menu(_),
+            "ℹ️ Support menu is currently not available.",
+            reply_markup=help_main_menu(_),
         )
         return
 
