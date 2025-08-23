@@ -4,15 +4,13 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from AviaxMusic import app
 from AviaxMusic.utils.database import get_lang
-from AviaxMusic.utils.decorators.language import LanguageStart, languageCB
+from AviaxMusic.utils.decorators.language import languageCB
 from AviaxMusic.utils.inline.help import (
     help_main_menu,
     help_music_menu,
     help_advanced_menu,
-    support_menu,
-    help_back_markup,
 )
-from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
+from config import BANNED_USERS, START_IMG_URL
 from strings import get_string, helpers
 
 
@@ -23,7 +21,7 @@ async def helper_private(client, message: types.Message):
     _ = get_string(language)
     await message.reply_photo(
         photo=START_IMG_URL,
-        caption=_["help_1"].format(SUPPORT_GROUP),
+        caption=_["help_1"],
         reply_markup=help_main_menu(_),
     )
 
@@ -48,30 +46,13 @@ async def back_to_main(client, CallbackQuery, _):
     await CallbackQuery.edit_message_reply_markup(reply_markup=help_main_menu(_))
 
 
-# Handle Help Callback (hb1..hb22 and bs2)
+# Handle Help Callback (hb1..hb21)
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
     cb = CallbackQuery.data.strip().split(None, 1)[1]
 
-    # Support Section (bs2)
-    if cb == "bs2":
-        await CallbackQuery.message.edit_text(
-            "Choose from the Support Menu below 👇",
-            reply_markup=support_menu(_),
-        )
-        return
-
-    # Example: hb22
-    if cb == "hb22":
-        text = getattr(helpers, "HELP_22", "ℹ️ No help available for this.")
-        await CallbackQuery.message.edit_text(
-            text,
-            reply_markup=help_back_markup(_),
-        )
-        return
-
-    # General help sections hb1..hb21
+    # Example: hb5 → loads HELP_5 from strings/helpers.py
     text = getattr(helpers, f"HELP_{cb[2:]}", "ℹ️ No help available for this.")
     await CallbackQuery.message.edit_text(
         text,
