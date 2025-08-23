@@ -49,3 +49,18 @@ async def helper_cb(client, CallbackQuery, _):
     cb = CallbackQuery.data.strip().split(None, 1)[1]
     text = getattr(helpers, f"HELP_{cb[2:]}", "ℹ️ No help available for this.")
     await CallbackQuery.edit_message_text(text, reply_markup=help_main_menu(_))
+
+
+
+elif callback == "bs2":
+    await query.message.edit_text(
+        "Choose from the Support Menu below 👇",
+        reply_markup=support_menu(_)
+    )
+
+elif callback == "hb22":
+    await query.message.edit_text(
+        HELP_22,
+        reply_markup=help_back_markup(_)
+    )
+
