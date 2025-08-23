@@ -85,10 +85,10 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://graph.org//file/25115719697ed91ef5672.jpg"
+    "START_IMG_URL", "https://graph.org/file/2255334da15aee384dcb5-c7b55af2c8cb40c4cb.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://graph.org//file/389a372e8ae039320ca6c.png"
+    "PING_IMG_URL", "https://graph.org/file/2255334da15aee384dcb5-c7b55af2c8cb40c4cb.jpg"
 )
 PLAYLIST_IMG_URL = "https://graph.org/file/2255334da15aee384dcb5-c7b55af2c8cb40c4cb.jpg"
 STATS_IMG_URL = "https://graph.org/file/2255334da15aee384dcb5-c7b55af2c8cb40c4cb.jpg"
@@ -121,4 +121,5 @@ if SUPPORT_GROUP:
         raise SystemExit(
             "[ERROR] - Your SUPPORT_GROUP url is wrong. Please ensure that it starts with https://"
         )
+
 
