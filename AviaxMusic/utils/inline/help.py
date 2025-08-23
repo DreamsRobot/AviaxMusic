@@ -67,20 +67,3 @@ def help_advanced_menu(_):
         ]
     )
 
-def support_menu(_):
-    buttons = [
-        [
-            InlineKeyboardButton(text=_["B_S_2_BTN1"], url="https://t.me/CFCBots"),
-            InlineKeyboardButton(text=_["B_S_2_BTN2"], url="https://t.me/CloseFriendsCommunity"),
-        ],
-        [
-            InlineKeyboardButton(text=_["B_S_2_BTN3"], url="https://t.me/emixlove"),
-        ],
-        [
-            InlineKeyboardButton(text=_["B_S_2_BTN4"], callback_data="help_callback hb22"),
-        ],
-        [
-            InlineKeyboardButton(text="🔙 Back", callback_data="help_callback back"),
-        ],
-    ]
-    return InlineKeyboardMarkup(buttons)
