@@ -311,17 +311,3 @@ HELP_21 = """<b>📝 Rules for group</b>
     - You can only add one feed per chat.
     - Currently RSS and ATOM feeds are supported
 """
-
-HELP_22 = """⎯⎯⎯⎯⎯⎯ ✦ 𝗔𝗟𝗜𝗩𝗘 ✦ ⎯⎯⎯⎯⎯⎯
-🎶 DreamSong | MistiMusic 🎶
-
-💠 24/7 High Quality Music  
-💠 Lightning Fast Controls  
-💠 Premium Group Management  
-
-➥ @DreamSongRobot - ALIVE
-➥ @MistiMusicRobot - ALIVE
-⎯⎯⎯⎯⎯⎯ ✦ 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ✦ ⎯⎯⎯⎯⎯⎯
-"""
-
-
