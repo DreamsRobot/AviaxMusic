@@ -266,9 +266,8 @@ HELP_20 = """📝 Help - Notes:
 ❍ /deleteall To delete all the notes in a chat (permanently).
 
 <b>Checkout /markdownhelp to know more about formattings and other syntax.</b>
-"""
 
-HELP_21 = """<b>🪈 Help - Pipes</b>
+<b>🪈 Help - Pipes</b>
 
 ❍ /activate_pipe [FROM_CHAT_ID] [TO_CHAT_ID] [BOT|USERBOT]
 ❍ /deactivate_pipe [FROM_CHAT_ID] Deactivete a pipe.
@@ -281,20 +280,7 @@ HELP_21 = """<b>🪈 Help - Pipes</b>
 ❍ /q r - to quote a message with it's reply
 """
 
-HELP_22 = """⚙️ Help - RSS:
-
-❍ /add_feed [URL] - Add a feed to chat
-❍ /rm_feed - Remove feed from chat
-
-<b>Note: </b>
-    - This will check for updates every 5 minutes.
-    - You can only add one feed per chat.
-    - Currently RSS and ATOM feeds are supported
-    
-    """
-
-
-HELP_23 = """<b>📝 Rules for group</b>
+HELP_21 = """<b>📝 Rules for group</b>
 
 ❍ /rules: get the rules for this chat.
 ❍ /setrules: Reply to a message to set the rules for the chat.
@@ -312,6 +298,19 @@ HELP_23 = """<b>📝 Rules for group</b>
 
 <b>Here is the help for Telegraph</b>
 ❍ /telegraph [Page name]: Paste styled text on telegraph.
-❍ /iplookup [ip address] to get the details about that ip"""
+❍ /iplookup [ip address] to get the details about that ip
+
+
+<b>⚙️ Help - RSS</b>
+
+❍ /add_feed [URL] - Add a feed to chat
+❍ /rm_feed - Remove feed from chat
+
+<b>Note: </b>
+    - This will check for updates every 5 minutes.
+    - You can only add one feed per chat.
+    - Currently RSS and ATOM feeds are supported
+"""
+
 
 
