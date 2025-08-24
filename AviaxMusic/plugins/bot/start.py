@@ -20,7 +20,8 @@ from AviaxMusic.utils.database import (
 from AviaxMusic.utils import bot_sys_stats
 from AviaxMusic.utils.decorators.language import LanguageStart
 from AviaxMusic.utils.formatters import get_readable_time
-from AviaxMusic.utils.inline import help_pannel, private_panel, start_panel
+from AviaxMusic.utils.inline.start import start_panel, private_panel
+from AviaxMusic.utils.inline.help import help_main_menu, help_back_markup
 from config import BANNED_USERS
 from strings import get_string
 
@@ -153,3 +154,4 @@ async def welcome(client, message: Message):
                 await message.stop_propagation()
         except Exception as ex:
             print(ex)
+
