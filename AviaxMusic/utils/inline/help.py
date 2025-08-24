@@ -67,3 +67,12 @@ def help_advanced_menu(_):
         ]
     )
 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
+def help_back_markup(_):
+    return InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("⬅️ Back", callback_data="help_main")]
+        ]
+    )
+
