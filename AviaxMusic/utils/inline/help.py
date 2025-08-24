@@ -1,43 +1,20 @@
-from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from AviaxMusic import app
 
 
-# Main Help Menu
+# Main Help Menu with 21 Buttons
 def help_main_menu(_):
     return InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text=_["B_S_1"], callback_data="help_section music")],
-            [InlineKeyboardButton(text=_["B_S_2"], callback_data="help_section settings")],
-            [InlineKeyboardButton(text=_["B_S_3"], callback_data="help_section advanced")],
-            [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
-        ]
-    )
-
-
-# Music Help Submenu (B_S_1)
-def help_music_menu(_):
-    return InlineKeyboardMarkup(
-        [
             [
-                InlineKeyboardButton(text=_["B_H_1"], callback_data="help_callback hb1"),
-                InlineKeyboardButton(text=_["B_H_2"], callback_data="help_callback hb2"),
-                InlineKeyboardButton(text=_["B_H_3"], callback_data="help_callback hb3"),
+                InlineKeyboardButton(text=_["B_M_1"], callback_data="help_callback hb1"),
+                InlineKeyboardButton(text=_["B_M_2"], callback_data="help_callback hb2"),
+                InlineKeyboardButton(text=_["B_M_3"], callback_data="help_callback hb3"),
             ],
             [
-                InlineKeyboardButton(text=_["B_H_4"], callback_data="help_callback hb4"),
-                InlineKeyboardButton(text=_["B_H_5"], callback_data="help_callback hb5"),
-                InlineKeyboardButton(text=_["B_H_6"], callback_data="help_callback hb6"),
+                InlineKeyboardButton(text=_["B_M_4"], callback_data="help_callback hb4"),
+                InlineKeyboardButton(text=_["B_M_5"], callback_data="help_callback hb5"),
+                InlineKeyboardButton(text=_["B_M_6"], callback_data="help_callback hb6"),
             ],
-            [InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data="help_main")],
-        ]
-    )
-
-
-# Advanced Help Submenu (B_S_3)
-def help_advanced_menu(_):
-    return InlineKeyboardMarkup(
-        [
             [
                 InlineKeyboardButton(text=_["B_H_7"], callback_data="help_callback hb7"),
                 InlineKeyboardButton(text=_["B_H_8"], callback_data="help_callback hb8"),
@@ -63,16 +40,15 @@ def help_advanced_menu(_):
                 InlineKeyboardButton(text=_["B_H_20"], callback_data="help_callback hb20"),
                 InlineKeyboardButton(text=_["B_H_21"], callback_data="help_callback hb21"),
             ],
-            [InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data="help_main")],
+            [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
         ]
     )
 
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+# Back Button
 def help_back_markup(_):
     return InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("⬅️ Back", callback_data="help_main")]
         ]
     )
-
