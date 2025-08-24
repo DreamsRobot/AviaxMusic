@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from AviaxMusic import app
 from AviaxMusic.utils.database import get_lang
-from AviaxMusic.utils.decorators.language import LanguageStart, languageCB
+from AviaxMusic.utils.decorators.language import languageCB
 from AviaxMusic.utils.inline.help import (
     help_main_menu,
     help_music_menu,
@@ -47,13 +47,13 @@ async def back_to_main(client, CallbackQuery, _):
     await CallbackQuery.edit_message_reply_markup(reply_markup=help_main_menu(_))
 
 
-# Handle Help Callback (hb1..hb21 and bs2)
+# Handle Help Callback (hb1..hb21)
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
     cb = CallbackQuery.data.strip().split(None, 1)[1]
 
-    # Support Section (bs2) removed
+    # If any old "bs2" callback comes, just send main menu
     if cb == "bs2":
         await CallbackQuery.message.edit_text(
             "ℹ️ Support menu is currently not available.",
@@ -62,7 +62,7 @@ async def helper_cb(client, CallbackQuery, _):
         return
 
     # General help sections hb1..hb21
-    text = getattr(helpers, f"HELP_{cb[2:]}", "ℹ️ No help available for this.")
+    text = getattr(helpers, f"HELP_{cb[2:]}", "ℹ️ No help available for this section.")
     await CallbackQuery.message.edit_text(
         text,
         reply_markup=help_back_markup(_),
